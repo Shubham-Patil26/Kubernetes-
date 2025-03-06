@@ -1,4 +1,3 @@
-version: 3
 services:
   webserver:
     image: shubham8357/docker:dada
