@@ -5,7 +5,10 @@ metadata:
 spec:
   replicas: 5
   strategy:
-    type: Recreate
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 1
   selector:
     matchLabels:
       app: mydeploy
@@ -15,7 +18,7 @@ spec:
         app: mydeploy
     spec:
       containers:
-      - name: mydeploy
-        image: httpd
-        ports:
-        - containerPort: 80
+        - name: mydeploy
+          image: httpd
+          ports:
+          - containerPort: 80
