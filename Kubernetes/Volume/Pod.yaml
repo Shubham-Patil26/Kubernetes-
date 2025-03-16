@@ -18,6 +18,6 @@ spec:
         cpu: "500m"
     ports:
       - containerPort: 80
-    VolumeMount:
+    volumeMounts:
       - mountPath: "/usr/share/nginx/html"
         name: mypv
