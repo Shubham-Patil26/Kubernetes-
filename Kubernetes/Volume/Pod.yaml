@@ -5,7 +5,7 @@ metadata:
 spec:
   volumes:
   - name: mypv
-    PersistentVolumeClaim: 
+    persistentVolumeClaim: 
       ClaimName: mypvc
   containers:
   - name: myvolume
