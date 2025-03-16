@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myvolume
+  labels:
+    name: myvolume
+spec:
+  volumes:
+  - name: mypv
+    PersistentVolumeClaim: 
+    ClaimName: mypvc
+  containers:
+  - name: myvolume
+    image: nginx
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
+    VolumeMount:
+      - mountPath: "/usr/share/nginx/html"
+        name: mypv
