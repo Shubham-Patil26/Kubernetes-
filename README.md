@@ -15,7 +15,8 @@ When you run applications in containers (like Docker), managing them manually ca
 A Kubernetes cluster is a group of machines (nodes) that work together to run and manage containerized applications efficiently. It consists of a Control Plane (Master Node) and multiple Worker Nodes that execute the applications.
 
 ## Kubernates architecture
-![kubernates-architure](kubernates-arch.jpg)
+![image](https://github.com/user-attachments/assets/e600681c-ea30-4cc1-a141-4de113948511)
+
 ### Explanation:
 A Kubernetes architecture consists of a Control Plane (Master Node) and Worker Nodes that manage and run containerized
 applications
